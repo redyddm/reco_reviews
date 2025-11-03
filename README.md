@@ -60,18 +60,24 @@ Clone the repository and install the required packages:
 git clone https://github.com/redyddm/reco_reviews
 cd reco_reviews
 pip install -r requirements.txt
-
+```
+## Usage
 # Exemple pour générer le dataset
+```bash
 python -m src.dataset.main
-
+```
 # Exemple pour générer les features
+```bash
 python -m src.features.main
-
+```
 # Exemple pour entraîner le modèle
+```bash
 python -m src.modeling.train
-
-
+```
+## Stramlit Interface
+```bash
 streamlit run app.py
+```
 
 
 
