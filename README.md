@@ -63,6 +63,11 @@ cd reco_reviews
 pip install -r requirements.txt
 ```
 ## Usage
+# Commands 
+```bash
+python .\main.py --help
+```
+Pour voir les commandes disponibles (pareil pour dataset etc pour voir leurs commandes respectives)
 # Exemple pour générer le dataset
 ```bash
 python .\main.py dataset build
@@ -75,10 +80,6 @@ python .\main.py features generate
 ```bash
 python .\main.py train run
 ```
-```bash
-python .\main.py --help
-```
-Pour voir les commandes disponibles (pareil pour dataset etc pour voir leurs commandes respectives)
 ## Stramlit Interface
 ```bash
 streamlit run app.py
