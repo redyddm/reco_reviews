@@ -24,6 +24,7 @@
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
+├── main.py            <- code to run the pipeline
 │
 └── src                 <- Source code for use in this project.
     │
@@ -74,6 +75,10 @@ python .\main.py features generate
 ```bash
 python .\main.py train run
 ```
+```bash
+python .\main.py --help
+```
+Pour voir les commandes disponibles (pareil pour dataset etc pour voir leurs commandes respectives)
 ## Stramlit Interface
 ```bash
 streamlit run app.py
