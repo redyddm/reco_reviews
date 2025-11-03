@@ -63,20 +63,20 @@ cd reco_reviews
 pip install -r requirements.txt
 ```
 ## Usage
-# Commands 
+### Commands 
 ```bash
 python .\main.py --help
 ```
 Pour voir les commandes disponibles (pareil pour dataset etc pour voir leurs commandes respectives)
-# Exemple pour générer le dataset
+### Exemple pour générer le dataset
 ```bash
 python .\main.py dataset build
 ```
-# Exemple pour générer les features
+### Exemple pour générer les features
 ```bash
 python .\main.py features generate
 ```
-# Exemple pour entraîner le modèle
+### Exemple pour entraîner le modèle
 ```bash
 python .\main.py train run
 ```
