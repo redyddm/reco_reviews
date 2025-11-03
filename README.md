@@ -57,8 +57,21 @@
 Clone the repository and install the required packages:
 
 ```bash
-git clone https://github.com/redyddm/projet_ter.git
-cd projet_ter
+git clone https://github.com/redyddm/reco_reviews
+cd reco_reviews
 pip install -r requirements.txt
+
+# Exemple pour générer le dataset
+python -m src.dataset.main
+
+# Exemple pour générer les features
+python -m src.features.main
+
+# Exemple pour entraîner le modèle
+python -m src.modeling.train
+
+
+streamlit run app.py
+
 
 
