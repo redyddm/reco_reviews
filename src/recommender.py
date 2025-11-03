@@ -1,7 +1,9 @@
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
-def recommandation_reviews(review_index, content_dataset, k=5):
+def recommandation_reviews(review_id, content_dataset, k=5):
+
+    review_index = np.where(content_dataset['id'] == review_id)[0][0]
     
     movie_title = content_dataset['movie_title'][review_index]
     review_embedding = content_dataset['review_embedding'][review_index]
