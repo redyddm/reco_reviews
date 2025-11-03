@@ -50,3 +50,15 @@
 
 --------
 
+---
+
+## Installation
+
+Clone the repository and install the required packages:
+
+```bash
+git clone https://github.com/redyddm/projet_ter.git
+cd projet_ter
+pip install -r requirements.txt
+
+
