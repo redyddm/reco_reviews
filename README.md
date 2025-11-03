@@ -4,8 +4,6 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-A short description of the project.
-
 ## Project Organization
 
 ```
@@ -51,4 +49,35 @@ A short description of the project.
 ```
 
 --------
+
+---
+
+## Installation
+
+Clone the repository and install the required packages:
+
+```bash
+git clone https://github.com/redyddm/reco_reviews
+cd reco_reviews
+pip install -r requirements.txt
+```
+## Usage
+# Exemple pour générer le dataset
+```bash
+python -m src.dataset.main
+```
+# Exemple pour générer les features
+```bash
+python -m src.features.main
+```
+# Exemple pour entraîner le modèle
+```bash
+python -m src.modeling.train
+```
+## Stramlit Interface
+```bash
+streamlit run app.py
+```
+
+
 
