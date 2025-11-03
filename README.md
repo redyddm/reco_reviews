@@ -64,15 +64,15 @@ pip install -r requirements.txt
 ## Usage
 # Exemple pour générer le dataset
 ```bash
-python -m src.dataset.main
+python .\main.py dataset main
 ```
 # Exemple pour générer les features
 ```bash
-python -m src.features.main
+python .\main.py features main
 ```
 # Exemple pour entraîner le modèle
 ```bash
-python -m src.modeling.train
+python .\main.py train main
 ```
 ## Stramlit Interface
 ```bash
