@@ -1,9 +1,10 @@
-loguru
+loguru==0.7.3
 pip
-tqdm
-typer
-numpy
-pandas
-gensim
-scikit-learn
+tqdm==4.67.1
+typer==0.16.0
+numpy==1.26.4
+pandas==2.3.1
+gensim==4.3.3
+scikit-learn==1.7.1
+streamlit==1.48.1
 -e .
