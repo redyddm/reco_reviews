@@ -2,6 +2,10 @@ import re
 import html
 
 def text_cleaning(s):
+    """ Fonction de nettoyage de texte.
+    Args:
+        s (str) : texte à nettoyer
+    """
     res = html.unescape(s)
     res = re.sub("<.*?>", "", res)
     res = re.sub("[\n\t\r]", "", res)
@@ -9,6 +13,10 @@ def text_cleaning(s):
     return res
 
 def preprocess_data(df):
+    """ Fonction de prétraitement des données.
+    Args:
+        df (pd.DataFrame) : dataframe avec des reviews
+    """
     df_preprocessed = df.copy()
 
     df_preprocessed.dropna(subset="review_content", inplace=True)

@@ -2,6 +2,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
 def recommandation_reviews(review_id, content_dataset, k=5):
+    """ Fonction de recommandation de reviews.
+    Args:
+        review_id (int) : id de la review
+        content_dataset (pd.DataFrame) : dataframe avec toutes les reviews
+    """
 
     review_index = np.where(content_dataset['id'] == review_id)[0][0]
     

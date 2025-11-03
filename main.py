@@ -2,6 +2,8 @@ import typer
 from src import dataset, features
 from src.modeling import train, predict
 
+
+# Cette partie a été générée avec l'IA
 app = typer.Typer()
 
 app.add_typer(dataset.app, name="dataset")
