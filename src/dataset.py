@@ -10,7 +10,7 @@ from src.preprocessing import preprocess_data
 
 app = typer.Typer()
 
-@app.command()
+@app.command("build")
 def main(
     input_path: list[Path] = [RAW_DATA_DIR / "interstellar_critique.csv", RAW_DATA_DIR / "fightclub_critiques.csv"],
     output_path: Path = PROCESSED_DATA_DIR / "content_dataset.csv",
@@ -34,7 +34,7 @@ def main(
 
     logger.info(f"Saving processed dataset to {output_path}.")
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    data.to_csv(output_path)
+    data.to_csv(str(output_path))
 
     logger.success("Processed dataset saved.")
 

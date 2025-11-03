@@ -11,10 +11,9 @@ from src.recommender import recommandation_reviews
 app = typer.Typer()
 
 
-@app.command()
+@app.command("run")
 def main(
     dataset_path = PROCESSED_DATA_DIR / "content_dataset.csv",
-    features_path: Path = PROCESSED_DATA_DIR / "features.csv",
     embeddings_path: Path = PROCESSED_DATA_DIR /"embeddings.npy",
     k: int = typer.Option(5, prompt="Number of recommendations"),
     index: int = typer.Option(0, prompt="Review index")
@@ -22,12 +21,13 @@ def main(
     logger.info("Performing inference for model...")
 
     data = pd.read_csv(dataset_path)
-    features = pd.read_csv(features_path)
     embeddings = np.load(embeddings_path)
 
     data['review_embedding'] = embeddings.tolist()
 
-    top_reviews, sim_scores = recommandation_reviews(index, data, k)
+    review_id = data['id'][0]
+
+    top_reviews, sim_scores = recommandation_reviews(review_id, data, k)
 
     logger.info(f"Review en cours de lecture :\n {data['review_content'][index]}")
 

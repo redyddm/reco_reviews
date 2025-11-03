@@ -12,7 +12,7 @@ from src.config import PROCESSED_DATA_DIR
 app = typer.Typer()
 
 
-@app.command()
+@app.command("generate")
 def main(
     input_path: Path = PROCESSED_DATA_DIR / "content_dataset.csv",
     output_path: Path = PROCESSED_DATA_DIR / "features.csv",
@@ -34,7 +34,7 @@ def main(
     logger.info(f"Saving features to {output_path}.")
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    features.to_csv(output_path)
+    features.to_csv(str(output_path))
 
     logger.success("Features saved.")
 

@@ -14,7 +14,7 @@ from src.utils import get_text_vector
 
 app = typer.Typer()
 
-@app.command()
+@app.command("run")
 def main(
     features_path: Path = PROCESSED_DATA_DIR / "features.csv",
     embeddings_path : Path = PROCESSED_DATA_DIR / "embeddings.npy",
